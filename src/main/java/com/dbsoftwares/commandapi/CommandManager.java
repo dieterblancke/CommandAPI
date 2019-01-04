@@ -20,8 +20,9 @@ public class CommandManager {
     private CommandManager() {
         try {
             commandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
+            commandMap.setAccessible(true);
         } catch (NoSuchFieldException e) {
-            e.printStackTrace();
+            throw new CommandException("Could not find commandMap, please contact the Developer.");
         }
     }
 
@@ -76,6 +77,7 @@ public class CommandManager {
     private void unregisterCommands(CommandMap map, String command, List<String> aliases) {
         try {
             final Field field = map.getClass().getDeclaredField("knownCommands");
+            field.setAccessible(true);
             final Map<String, Command> commands = (Map<String, Command>) field.get(map);
 
             commands.remove(command);
