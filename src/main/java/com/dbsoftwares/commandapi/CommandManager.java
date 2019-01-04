@@ -84,7 +84,7 @@ public class CommandManager {
             aliases.forEach(commands::remove);
             field.set(map, commands);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new CommandException("Could not unregister commands for " + command, e);
         }
     }
 }
