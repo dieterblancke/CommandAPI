@@ -76,8 +76,19 @@ public class CommandManager {
     @SuppressWarnings("unchecked")
     private void unregisterCommands(CommandMap map, String command, List<String> aliases) {
         try {
-            final Field field = map.getClass().getDeclaredField("knownCommands");
-            field.setAccessible(true);
+            Field field;
+            try {
+                field = map.getClass().getDeclaredField("knownCommands");
+                field.setAccessible(true);
+            } catch (NoSuchFieldException e) {
+                try {
+                    field = map.getClass().getSuperclass().getDeclaredField("knownCommands");
+                    field.setAccessible(true);
+                } catch (NoSuchFieldException e2) {
+                    throw new CommandException("Could not unregister commands for " + command, e2);
+                }
+            }
+
             final Map<String, Command> commands = (Map<String, Command>) field.get(map);
 
             commands.remove(command);
