@@ -1,5 +1,6 @@
 package com.dbsoftwares.commandapi;
 
+import com.dbsoftwares.commandapi.command.SpigotCommand;
 import com.dbsoftwares.commandapi.exception.CommandException;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
@@ -13,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 public class CommandManager {
+
+    // TODO: find a better way to handle messages ...
 
     private static CommandManager instance = new CommandManager();
     private Field commandMap;

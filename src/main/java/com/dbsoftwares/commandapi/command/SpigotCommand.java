@@ -1,6 +1,7 @@
-package com.dbsoftwares.commandapi;
+package com.dbsoftwares.commandapi.command;
 
 import com.dbsoftwares.commandapi.event.CommandCreateEvent;
+import com.dbsoftwares.commandapi.utils.MessageConfig;
 import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +22,7 @@ public abstract class SpigotCommand extends Command {
     protected String permission;
 
     @Setter
-    private String noPermissionMessage = "&cYou are now allowed to do this.";
+    private MessageConfig messageConfig = new MessageConfig();
 
     public SpigotCommand(final String name) {
         this(name, Lists.newArrayList());
@@ -49,7 +50,10 @@ public abstract class SpigotCommand extends Command {
     @Override
     public boolean execute(final CommandSender sender, final String alias, final String[] args) {
         if (permission != null && !sender.hasPermission(permission)) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', noPermissionMessage.replace("{permission}", permission)));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes(
+                    '&',
+                    messageConfig.getNoPermissionMessage().replace("{permission}", permission)
+            ));
             return false;
         }
 
