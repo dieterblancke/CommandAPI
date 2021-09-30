@@ -22,30 +22,29 @@
 
     <distributionManagement>
         <repository>
-            <id>dbsoftwares</id>
-            <name>DBSoftwares Repo</name>
-            <url>http://nexus.diviwork.nl/repository/dbsoftwares/</url>
+            <id>dieterblancke</id>
+            <url>https://repo.dieterblancke.xyz/artifactory/dieterblancke-public/</url>
         </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
-            <id>centrixpvp</id>
-            <url>http://nexus.diviwork.nl/repository/centrix-releases/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.13.2</version>
+            <artifactId>spigot-api</artifactId>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.22</version>
+            <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
