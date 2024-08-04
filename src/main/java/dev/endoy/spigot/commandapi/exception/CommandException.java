@@ -1,4 +1,4 @@
-package com.dbsoftwares.commandapi.exception;
+package dev.endoy.spigot.commandapi.exception;
 
 public class CommandException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.dbsoftwares.commandapi.command;
+package dev.endoy.spigot.commandapi.command;
 
 import com.google.common.collect.Lists;
 import lombok.Getter;

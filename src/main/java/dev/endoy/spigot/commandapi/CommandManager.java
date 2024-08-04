@@ -1,7 +1,7 @@
-package com.dbsoftwares.commandapi;
+package dev.endoy.spigot.commandapi;
 
-import com.dbsoftwares.commandapi.command.SpigotCommand;
-import com.dbsoftwares.commandapi.exception.CommandException;
+import dev.endoy.spigot.commandapi.command.SpigotCommand;
+import dev.endoy.spigot.commandapi.exception.CommandException;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

@@ -1,7 +1,7 @@
-package com.dbsoftwares.commandapi.command;
+package dev.endoy.spigot.commandapi.command;
 
-import com.dbsoftwares.commandapi.event.CommandCreateEvent;
-import com.dbsoftwares.commandapi.utils.MessageConfig;
+import dev.endoy.spigot.commandapi.event.CommandCreateEvent;
+import dev.endoy.spigot.commandapi.utils.MessageConfig;
 import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.Setter;

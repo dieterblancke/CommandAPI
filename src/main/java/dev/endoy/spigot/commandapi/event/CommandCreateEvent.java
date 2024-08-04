@@ -1,6 +1,6 @@
-package com.dbsoftwares.commandapi.event;
+package dev.endoy.spigot.commandapi.event;
 
-import com.dbsoftwares.commandapi.command.SpigotCommand;
+import dev.endoy.spigot.commandapi.command.SpigotCommand;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 

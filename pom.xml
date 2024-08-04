@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dbsoftwares.commandapi</groupId>
+    <groupId>dev.endoy.spigot.commandapi</groupId>
     <artifactId>CommandAPI</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <build>
         <plugins>
             <plugin>
@@ -22,8 +22,8 @@
 
     <distributionManagement>
         <repository>
-            <id>dieterblancke</id>
-            <url>https://repo.dieterblancke.xyz/artifactory/dieterblancke-public/</url>
+            <id>endoy</id>
+            <url>https://repo.endoy.dev/artifactory/endoy-public/</url>
         </repository>
     </distributionManagement>
 

@@ -1,4 +1,4 @@
-package com.dbsoftwares.commandapi.utils;
+package dev.endoy.spigot.commandapi.utils;
 
 import lombok.Data;
 

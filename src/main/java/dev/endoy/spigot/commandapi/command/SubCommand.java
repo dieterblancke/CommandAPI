@@ -16,9 +16,9 @@
  *
  */
 
-package com.dbsoftwares.commandapi.command;
+package dev.endoy.spigot.commandapi.command;
 
-import com.dbsoftwares.commandapi.utils.MessageConfig;
+import dev.endoy.spigot.commandapi.utils.MessageConfig;
 import lombok.Data;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
